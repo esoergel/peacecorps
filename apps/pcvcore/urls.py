@@ -1,6 +1,9 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic import TemplateView
 
+from .views import UpdatePCVProfile
+
+# urls prefixed by /user/
 urlpatterns = patterns('',
 
     url(r'^$', TemplateView.as_view(template_name="base.html")),
@@ -16,4 +19,5 @@ urlpatterns = patterns('',
         {'next_page': '/'},
         name="logout"
     ),
+    url(r'^update/$', UpdatePCVProfile.as_view(), name="update_profile"),
 )

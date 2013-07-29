@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     # Third party apps
+    'bootstrapform',
     'taggit',
     'south',
     # Our apps
@@ -182,5 +183,5 @@ TEMPLATE_DEBUG = DEBUG
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-LOGIN_REDIRECT_URL = '/user/'
+LOGIN_REDIRECT_URL = '/pcv/'
 LOGIN_URL = '/user/login'

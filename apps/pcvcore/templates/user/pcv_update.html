@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load bootstrap %}
+
+{% block css %}
+  {{ block.super }}
+  <style>
+    textarea {
+      width: 100%;
+    }
+  </style>
+{% endblock css %}
+
+
+{% block content %}
+  <form class="form-horizontal" action=".">{% csrf_token %}
+    {{ form|bootstrap }}
+    <div class="control-group">
+      <div class="controls">
+        <input class="btn btn-primary" type="submit" value="Submit">
+      </div>
+    </div>
+  </form>
+{% endblock content %}

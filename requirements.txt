@@ -7,6 +7,7 @@ boto==2.9.6
 bpython==0.12
 distribute==0.6.24
 dj-database-url==0.2.1
+django-bootstrap-form==2.0.6
 django-braces==1.0.0
 django-s3-folder-storage==0.1
 django-storages==1.1.5

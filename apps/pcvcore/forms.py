@@ -1,6 +1,15 @@
 from django.forms import ModelForm
 
-class TeacherForm(ModelForm):
+from .models import PCVProfile
+
+
+class PCVForm(ModelForm):
     class Meta:
-        model = Teacher
-        fields = ['user', 'school', 'grade', 'following', 'address', 'bio']
+        model = PCVProfile
+        fields = ["sector", "start_date", "end_date",
+        "home_address", "home_state", "bio"]
+
+# class TeacherForm(ModelForm):
+#     class Meta:
+#         model = Teacher
+#         fields = ['user', 'school', 'grade', 'following', 'address', 'bio']
