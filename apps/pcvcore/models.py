@@ -37,8 +37,24 @@ class School(models.Model):
     school_name = models.CharField(max_length=128)
     zip_code = models.CharField(max_length=10, blank=True)
     about = models.TextField(blank=True)
+
     def __unicode__(self):
         return self.school_name
+
+    def get_lat_long(self):
+        # from zip_code find lat_long
+        # return data_options.ZIP_MAP[self.zip_code]
+        return (1111, 2222)
+
+    def as_dict(self):
+        return {
+            'city': self.city,
+            'state': self.state,
+            'school_name': self.school_name,
+            'zip_code': self.zip_code,
+            'about': self.about,
+            'lat_long': self.get_lat_long(),
+        }
 
 class Teacher(models.Model):
     user = models.OneToOneField('auth.User')

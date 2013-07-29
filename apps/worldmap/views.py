@@ -1,6 +1,7 @@
 from django.views.generic import TemplateView, ListView, View
 
 from apps.pcvblog.models import Entry
+from apps.pcvcore.models import School
 from .map_utils import Ajaxify, get_map_data, make_geojson
 from data_options import COUNTRIES
 
@@ -24,7 +25,6 @@ class DataOptionsJSON(Ajaxify, View):
             "data": get_map_data()
         }
         return self.render_json_response(json_dict)
-
 
 # class BlogJSON(Ajaxify, ListView):
 #     """
@@ -100,3 +100,6 @@ class BlogJSON(JSONListView):
                 author__pcvprofile__home_state=filters["homestate"]
             )
         return entries
+
+class SchoolJSON(JSONListView):
+    model = School

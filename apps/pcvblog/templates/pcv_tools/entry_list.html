@@ -1,6 +1,9 @@
 {% extends 'pcv_tools/base.html' %}
 {% block content %}
 <h3>My Entries</h3>
+
+<a href="{% url "update_profile" %}">Update your profile</a>
+
 {% if entry_list %}
 <table id="entry_list">
   {% for entry in entry_list %}
