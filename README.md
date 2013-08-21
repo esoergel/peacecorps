@@ -29,6 +29,10 @@ Install requirements:
 
 Customize ``settings/localenv.py.sample`` and copy it to ``settings/localenv.py``
 
+Create the database:
+
+    python manage.py syncdb
+
 Migrate the database:
 
     python manage.py migrate
