@@ -4,7 +4,6 @@ import os
 # SECRET_KEY
 # DJANGO_ENV ("DEV" or "PRODUCTION") - defaults to DEV
 # DJANGO_DEBUG (True or False) - defaults to True in DEV, False in PRODUCTION
-
 ADMINS = (
     ('u45127', 'thadknull@gmail.com'),
 )
@@ -69,7 +68,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+#    'djangxw.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Make this unique, and don't share it with anybody.
